@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aadnya Kuchekar — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="top" class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top">Aadnya Kuchekar</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME / Landing -->
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <img src="images/profile.jpg" alt="Profile picture" class="profile-pic"/>
+        <h1>Hello — I'm <span class="accent">Aadnya Kuchekar</span></h1>
+        <p class="tagline">A short bio: Web Developer • Problem Solver • Lifelong Learner</p>
+        <a class="btn" href="#projects">See projects</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><strong>Education:</strong> Bachelor's in Computer Engineering, Mumbai University</p>
+          <p><strong>Experience:</strong> Internship in Python with Web Scraping and MySQL</p>
+          <p><strong>Hobbies:</strong> Reading, Coding, Music.</p>
+          <p>I build responsive websites and interactive UIs using HTML, CSS and JavaScript.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>HTML5 & semantic markup</li>
+            <li>CSS3 (Flexbox, Grid, Media Queries)</li>
+            <li>JavaScript (DOM, events, validation)</li>
+            <li>Version control (Git) & GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="project-gallery">
+        <!-- Project card 1 -->
+        <article class="project-card">
+          <img src="images/picture1.jpg" alt="Project 1 screenshot" class="project-img" />
+          <div class="project-body">
+            <h3>Food Image to Recipe Generation</h3>
+            <p>-FIRE is an innovative example of integrating computer vision with real life utility showcasing skills in AI.</p>
+            <button class="btn view-btn" data-img="images/project1.jpg" data-title="Project One">View</button>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="project-card">
+          <img src="images/picture2.jpg" alt="Project 2 screenshot" class="project-img" />
+          <div class="project-body">
+            <h3>Online Event Registration Using QR Code</h3>
+            <p>-Developed a web based app design to simplify event sign-up and automate the check-in process through QR code technology.</p>
+            <button class="btn view-btn" data-img="images/project2.jpg" data-title="Project Two">View</button>
+          </div>
+        </article>
+
+        <!-- Project card 3 -->
+        <article class="project-card">
+          <img src="images/picture3.jpg" alt="Project 3 screenshot" class="project-img" />
+          <div class="project-body">
+            <h3>TASK PAD PRO- Desktop Editor</h3>
+            <p>-Developed a Desktop based Editor application enhanced with modern features like multilingual text translation and an integrated 
+drawing/painting tool. </p>
+            <button class="btn view-btn" data-img="images/project3.jpg" data-title="Project Three">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required />
+          <small class="error" id="nameError"></small>
+        </div>
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" id="emailError"></small>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+        <div class="form-row">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+        <button class="btn" type="submit">Send Message</button>
+        <p id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal for project image -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImg" src="" alt="" />
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span>Aadnya Kuchekar. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
